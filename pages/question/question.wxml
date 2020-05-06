@@ -18,11 +18,11 @@
             <view class="que-follow">
                 <view class="left">
                     <view class="watch">
-                        <image src="../../images/eye.png"></image>
+                        <image src="../../image/eye.png"></image>
                         <text>3316</text>
                     </view>
                     <view class="comment">
-                        <image src="../../images/comment2.png"></image>
+                        <image src="../../image/comment2.png"></image>
                         <text>27</text>
                     </view>
                 </view>
@@ -33,11 +33,11 @@
         </view>
         <view class="que-operate flex-wrp">
             <view class="invite flex-item">
-                <image src="../../images/invite.png"></image>
+                <image src="../../image/invite.png"></image>
                 <text>邀请回答</text>
             </view>
             <view class="write flex-item">
-                <image src="../../images/write.png"></image>
+                <image src="../../image/write.png"></image>
                 <text>写回答</text>
             </view>
         </view>
@@ -47,7 +47,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
@@ -76,7 +76,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
@@ -105,7 +105,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
@@ -134,7 +134,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
@@ -163,7 +163,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
@@ -192,7 +192,7 @@
             <view class="feed-source">
                 <a class="" bindTap="">
                     <view class="avatar">
-                        <image src="../../images/icon1.jpeg"></image>
+                        <image src="../../image/icon1.jpeg"></image>
                     </view>
                     <text>Rebecca</text>
                 </a>
