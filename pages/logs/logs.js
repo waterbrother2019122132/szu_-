@@ -1,4 +1,5 @@
 const app = getApp();
+var util = require('../../utils/util.js')
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
@@ -121,9 +122,26 @@ Page({
       active: e.detail.value
     })
   },
-   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e)
-     wx.navigateTo({ url: "/pages/get/get" })
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log(e.detail.value)
+    wx.request({
+      url: 'http://127.0.0.1:8000/login',
+      method: 'POST',
+      data: { name: e.detail.value.name },
+      success: function (res) {
+        console.log(res["data"])
+        console.log(util.getDiscovery()["ciyun"])
+        util.getDiscovery()["ciyun"] = res["data"]
+      }
+    })
+    wx.navigateTo({
+      url: '../get/get',
+    })
+    console.log('awdwadwadwadaw')
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
   },
   // goNext() {
   //   // 【næ vɪ ɡeɪ t to】

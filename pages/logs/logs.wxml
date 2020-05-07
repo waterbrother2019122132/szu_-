@@ -5,12 +5,12 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
 	<view class="cu-form-group margin-top">
 		<view class="title">分析内容</view>
-		<input placeholder="股票代码"></input>
+		<input placeholder="股票代码" name="stackid"></input>
 	</view>
 
 	<view class="cu-form-group">
 		<view class="title">开始</view>
-		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange" name="time">
 			<view class="picker">
 				{{date}}
 			</view>

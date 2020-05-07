@@ -1,8 +1,10 @@
+<view><text>{{ciyun}}</text></view>
 
 <form>
 	<view class="cu-form-group margin-top">
 		<view class="title">情感偏向</view>
 		<input placeholder="等待"></input>
+    
 	</view>
 	<view class="cu-form-group">
 		<view class="title">关键字</view>
@@ -16,9 +18,14 @@
    <view class="cu-progress round margin-top sm">
     <view class="bg-red" style="width:{{loading?'61.8%':''}};"></view>
   
-    
+  
     </view>
 		<!-- <input placeholder="？？？？"></input> -->
 	</view>
 
 </form> 
+  <view class="tagBall">
+  <a class="tag" wx:for="{{tagEle}}" wx:key="{{index}}" style="opacity:{{item.o}};z-index:{{item.z}};left: {{item.x+250}}rpx;top: {{item.y}}rpx;transform: scale({{item.s}})">
+    {{item.title}}
+  </a>
+ </view>

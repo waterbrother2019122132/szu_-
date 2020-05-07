@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/logs/logs",
+    "pages/index/index",
+    
     "pages/get/get",
     "pages/front/front",
-    "pages/first/first"
+    "pages/first/first",
+      "pages/tiezi/tiezi"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +30,10 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "用户信息获取"
+      },
+      {
+        "pagePath": "pages/tiezi/tiezi",
+        "text": "发帖子"
       }
     ]
   },

@@ -1,22 +1,4 @@
-// const formatTime = date => {
-//   const year = date.getFullYear()
-//   const month = date.getMonth() + 1
-//   const day = date.getDate()
-//   const hour = date.getHours()
-//   const minute = date.getMinutes()
-//   const second = date.getSeconds()
 
-//   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-// }
-
-// const formatNumber = n => {
-//   n = n.toString()
-//   return n[1] ? n : '0' + n
-// }
-
-// module.exports = {
-//   formatTime: formatTime
-// }
 function formatTime(date) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1
@@ -87,6 +69,7 @@ module.exports.getData2 = getData2;
 module.exports.getNext = getNext;
 module.exports.getDiscovery = getDiscovery;
 module.exports.discoveryNext = discoveryNext;
+
 
 
 

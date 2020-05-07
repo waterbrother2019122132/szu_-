@@ -1,0 +1,20 @@
+<!--pages/tiezi.wxml-->
+<text>pages/tiezi.wxml</text>
+
+<form bindsubmit="formSubmit"  bindreset="formReset">
+  <view class='input-content'>
+
+    <view class='input-col'>
+      <label>帖子内容:</label>
+      <input type='text' name="name" placeholder='写帖子' placeholder-style="color:#DBDBDB;"></input>
+    </view>
+    <view class='input-col'>
+      <label>作者:</label>
+      <input type='text' name="author" placeholder='省份，城市等' placeholder-style="color:#DBDBDB;"></input>
+    </view>
+  </view>
+  <view class='save'>
+    <button class='save-btn' form-type="submit">保存并使用</button>
+    <button form-type="reset">重置按钮</button>
+  </view>
+</form>

@@ -1,3 +1,29 @@
 /* pages/get/get.wxss */.cu-form-group .title {
   min-width: calc(4em + 30rpx);
 }
+.tagBall{
+      width: 420rpx;
+      height: 300rpx;
+      margin:300rpx auto;
+      position: relative;
+      left: 120rpx;
+  }
+  .IDw{
+    width: 40px;
+    height: 20px;
+  }
+  .tag{
+      display: block;
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      color: #000;
+      text-decoration: none;
+      font-size: 32rpx;
+      font-family: "微软雅黑";
+      font-weight: bold;
+  }
+  .tag:hover{border:1px solid #666;}
+.container{
+  height: 1500rpx;
+}

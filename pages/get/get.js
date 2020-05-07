@@ -1,6 +1,9 @@
 const app = getApp();
+var util = require('../../utils/util.js')
 Page({
+  
   data: {
+    ciyun: 'adw',
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     ColorList: app.globalData.ColorList,
@@ -62,6 +65,287 @@ Page({
     textareaAValue: '',
     textareaBValue: ''
   },
+  
+  onShow:function(){
+    let that = this;
+    that.setData({ciyun: util.getDiscovery()["ciyun"]})
+    this.innit();
+  }
+  ,
+ 
+  innit() {
+
+    var tagEle = [{
+      title: '我是谁',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '我在哪',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '123',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '456',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '789',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: 'zhy',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: 'zhy',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '我',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '你',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '就是',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '是不是',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '哪里呢',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '有什么',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '没什么',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '今天几号',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '我稀罕你',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '我是',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '你是',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    },
+    {
+      title: '这是什么',
+      x: 0,
+      y: 0,
+      z: 0,
+      s: 0,
+      o: 1,
+      f: 15,
+      angleX: 0,
+      angleY: 0
+    }
+    ]
+    for (var i = 0; i < tagEle.length; i++) {
+      var fallLength = 100 //圆的焦点
+      var angleX = Math.PI / 100
+      var angleY = Math.PI / 100
+      var k = (2 * (i + 1) - 1) / tagEle.length - 1;
+      //计算按圆形旋转
+      var a = Math.acos(k);
+      var b = a * Math.sqrt(tagEle.length * Math.PI);
+      //计算元素x，y坐标
+      var numx = 120 * Math.sin(a) * Math.cos(b)
+      var numy = 120 * Math.sin(a) * Math.sin(b);
+      var numz = 220 * Math.cos(a);
+
+      // console.log(numo)
+      //计算元素缩放大小
+      tagEle[i].x = numx * 2
+      tagEle[i].y = numy * 2
+      tagEle[i].z = numz
+      tagEle[i].s = 250 / (400 - tagEle[i].z)
+    }
+    //动画
+    setInterval(() => {
+      for (var i = 0; i < tagEle.length; i++) {
+        var a = Math.acos(k);
+        var numz = 240 * Math.cos(a);
+        tagEle[i].s = 250 / (400 - tagEle[i].z)
+        var cos = Math.cos(angleX);
+        var sin = Math.sin(angleX);
+        var y1 = tagEle[i].y * cos - tagEle[i].z * sin;
+        var z1 = tagEle[i].z * cos + tagEle[i].y * sin;
+        tagEle[i].y = y1;
+        tagEle[i].z = z1;
+
+        var cos = Math.cos(angleY);
+        var sin = Math.sin(angleY);
+        var x1 = tagEle[i].x * cos - tagEle[i].z * sin;
+        var z1 = tagEle[i].z * cos + tagEle[i].x * sin;
+        tagEle[i].x = x1;
+        tagEle[i].z = z1;
+        this.setData({
+          tagEle: tagEle
+        })
+      }
+    }, 100)
+  }
+  ,
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log(e.detail.value.name)
+    wx.request({
+      url: 'http://www.baidu.com/s',
+      method: 'POST',
+      data: { 'wd': e.detail.value.name },
+      success: function (res) {
+        var list = res.data.list;
+        console.log(1)
+      }
+    })
+    console.log('awdwadwadwadaw')
+  }
+  ,
   PickerChange(e) {
     console.log(e);
     this.setData({

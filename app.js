@@ -1,5 +1,10 @@
+
 //app.js
 App({
+  dataforpost:{
+    number:0,
+    ciyun:''
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -51,6 +56,10 @@ App({
       })
     }
   },
+  getdatapost:function(){
+    return dataforpost
+  }
+  ,
   globalData: {
     userInfo: null
   }
