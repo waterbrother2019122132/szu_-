@@ -83,6 +83,12 @@
 					"pathName": "pages/first/first",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tiezi/tiezi",
+					"pathName": "pages/tiezi/tiezi",
+					"scene": null
 				}
 			]
 		}

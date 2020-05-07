@@ -17,7 +17,21 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
+    var that = this;
+
+    //获取用户信息
+    wx.getUserInfo({
+      success: function (res) {
+
+        console.log(res);
+        that.data.userInfo = res.userInfo;
+
+        that.setData({
+          userInfo: that.data.userInfo
+        })
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

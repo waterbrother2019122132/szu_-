@@ -11,16 +11,17 @@ Page({
  
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    console.log(e.detail.value.name)
+    console.log(e.detail.value.name)//弄不出来
     wx.request({
-      url: '127.0.0.1:8000/login',
+      url: 'http://127.0.0.1:8000/login',
       method: 'POST',
-      data: { name: e.detail.value.name }, //字段名写清楚
-      dataType:'form',
+      data: { name: e.detail.value.name,content: e.detail.value.content}, //字段名写清楚 
       success: function (res) {
         var list = res.data.list;
-        console.log(1)
+        console.log(list)
+        console.log(111)
       }
+      
     })
     var AllData = util.getData2()
     AllData.data.unshift({
