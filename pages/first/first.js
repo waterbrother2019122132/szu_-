@@ -66,7 +66,7 @@ Page({
     wx.showToast({
       title: '刷新中',
       icon: 'loading',
-      duration: 1200
+      duration: 800
     });
     var feed = util.getData2();
     console.log("loaddata");
@@ -79,7 +79,7 @@ Page({
       wx.showToast({
         title: '刷新成功',
         icon: 'success',
-        duration:1200
+        duration:800
       })
     }, 3000)
 
@@ -90,7 +90,7 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
-      duration: 4000
+      duration: 800
     })
     var next = util.getNext();
     console.log("continueload");
@@ -103,7 +103,7 @@ Page({
       wx.showToast({
         title: '加载成功',
         icon: 'success',
-        duration: 1200
+        duration: 800
       })
     }, 3000)
   }

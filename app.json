@@ -21,19 +21,28 @@
     "list": [
       {
         "pagePath": "pages/first/first",
-        "text": "首页"
+        "text": "首页",
+          "iconPath": "/image/tabbar/basics.png",
+          "selectedIconPath": "/image/tabbar/basics_cur.png"
+        
       },
       {
         "pagePath": "pages/index/index",
-        "text": "我的"
+        "text": "我的",
+          "iconPath": "/image/tabbar/about.png",
+          "selectedIconPath": "/image/tabbar/about_cur.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "用户信息获取"
+        "text": "用户信息获取",
+          "iconPath": "/image/tabbar/component.png",
+          "selectedIconPath": "/image/tabbar/component_cur.png"
       },
       {
         "pagePath": "pages/tiezi/tiezi",
-        "text": "发帖子"
+        "text": "发帖子",
+          "iconPath": "/image/tabbar/plugin.png",
+          "selectedIconPath": "/image/tabbar/plugin_cur.png"
       }
     ]
   },
