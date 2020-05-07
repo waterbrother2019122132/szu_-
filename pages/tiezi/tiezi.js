@@ -89,6 +89,17 @@ Page({
   onReachBottom: function () {
 
   },
+  //字数改变触发事件
+  bindTextAreaChange: function (e) {
+    var that = this
+    var value = e.detail.value,
+      len = parseInt(value.length);
+    if (len > that.data.noteMaxLen)
+      return;
+    that.setData({
+      content: value, noteNowLen: len
+    })
+  },
 
   /**
    * 用户点击右上角分享
