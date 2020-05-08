@@ -12,6 +12,7 @@ Page({
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     console.log(e.detail.value.name)//弄不出来
+    
     wx.request({
       url: 'http://127.0.0.1:8000/login',
       method: 'POST',
@@ -37,6 +38,9 @@ Page({
       "comment_num": "18"
     })
     console.log('awdwadwadwadaw')
+    wx.switchTab({
+      url: '../first/first',
+    })
   },
   formReset: function () {
     console.log('form发生了reset事件')

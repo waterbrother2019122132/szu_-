@@ -15,7 +15,7 @@ Page({
   },
   bindQueTap: function () {
     wx.navigateTo({
-      url: '../question/question'
+      url: '../front/front'
     })
   },
   onLoad: function () {
@@ -43,7 +43,7 @@ Page({
   //网络请求数据, 实现首页刷新
   refresh0: function () {
     var index_api = '';
-    util.getData(index_api)
+    util.getData2()
       .then(function (data) {
         //this.setData({
         //
@@ -92,7 +92,7 @@ Page({
       icon: 'loading',
       duration: 800
     })
-    var next = util.getNext();
+    var next = util.getData2();
     console.log("continueload");
     var next_data = next.data;
     this.setData({
