@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/index/index",
     "pages/get/get",
-    "pages/tiezi/tiezi"
+    "pages/tiezi/tiezi",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,21 +22,20 @@
       {
         "pagePath": "pages/first/first",
         "text": "首页",
-          "iconPath": "/image/tabbar/basics.png",
-          "selectedIconPath": "/image/tabbar/basics_cur.png"
-        
+        "iconPath": "/image/tabbar/basics.png",
+        "selectedIconPath": "/image/tabbar/basics_cur.png"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "分析",
-          "iconPath": "/image/tabbar/component.png",
-          "selectedIconPath": "/image/tabbar/component_cur.png"
+        "iconPath": "/image/tabbar/component.png",
+        "selectedIconPath": "/image/tabbar/component_cur.png"
       },
       {
         "pagePath": "pages/tiezi/tiezi",
         "text": "发布内容",
-          "iconPath": "/image/tabbar/plugin.png",
-          "selectedIconPath": "/image/tabbar/plugin_cur.png"
+        "iconPath": "/image/tabbar/plugin.png",
+        "selectedIconPath": "/image/tabbar/plugin_cur.png"
       },
       {
         "pagePath": "pages/index/index",

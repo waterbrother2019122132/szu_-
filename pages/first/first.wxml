@@ -48,7 +48,7 @@
         </view>
       </view>
     </block>
-    <movable-view class="movableview" direction="all" style="height: 75rpx; width: 75rpx; background:hidden  position:fixed;">
+    <movable-view class="movableview" direction="all" style="height: 75rpx; width: 75rpx; background:hidden  position:relative;">
       <image src="../../image/add.png" style="height:100% " bindtap="bindToTap"></image>
     </movable-view>
   </movable-area>

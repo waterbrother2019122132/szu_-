@@ -41,7 +41,9 @@
         <image src="../../image/recent.png"></image>
       </view>
       <view class="myitem-name flex-item">
+      <navigator url="../history/history">
         <text>最近浏览</text>
+        </navigator>
       </view>
     </view>
  

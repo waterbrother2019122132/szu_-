@@ -101,7 +101,7 @@ image {
 	max-width: 100%;
 	display: inline-block;
 	position: relative;
-	z-index: 0;
+	
 }
 
 image.loading::before {
@@ -643,14 +643,14 @@ radio.white[checked] .wx-radio-input {
 	left: 20rpx;
 	width: 50%;
 	box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
-	transform: rotate(-3deg);
+
 	z-index: -1;
 }
 
 .shadow-warp:after {
 	right: 20rpx;
 	left: auto;
-	transform: rotate(3deg);
+
 }
 
 .shadow-blur {
@@ -1585,7 +1585,7 @@ button.icon.lg {
 	height: 0.6rem;
 	left: 0.6rem;
 	opacity: 0.3;
-	z-index: 0;
+
 }
 
 .cu-bar .action.sub-title text[class*="text-"]:last-child {
