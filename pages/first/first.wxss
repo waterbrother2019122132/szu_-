@@ -44,4 +44,9 @@
   background: #F0F4F3;
   color: #000;
 }
+.movableview{
+  position:fixed;
+  z-index:9999;
+ 
+}
 /*feed-item part is in app.wxss for multiplexing*/

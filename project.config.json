@@ -59,13 +59,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/logs/logs",
-					"pathName": "pages/logs/logs",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/get/get",
 					"pathName": "pages/get/get",
 					"query": "",
@@ -89,6 +82,14 @@
 					"id": -1,
 					"name": "pages/tiezi/tiezi",
 					"pathName": "pages/tiezi/tiezi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
+					"query": "",
 					"scene": null
 				}
 			]
