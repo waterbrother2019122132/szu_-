@@ -1,4 +1,4 @@
-<view><text>{{ciyun}}</text></view>
+<!-- <view><text>{{ciyun}}</text></view>
 
 <form>
 	<view class="cu-form-group margin-top">
@@ -10,22 +10,43 @@
 		<view class="title">关键字</view>
 		<input placeholder="输出"></input>
 	</view>
-  	
-
-	<view class="cu-form-group">
-		<view class="title">情感偏向</view>
 
    <view class="cu-progress round margin-top sm">
     <view class="bg-red" style="width:{{loading?'61.8%':''}};"></view>
   
-  
-    </view>
-		<!-- <input placeholder="？？？？"></input> -->
-	</view>
+  </view>
+		<input placeholder="？？？？"></input>
 
-</form> 
-  <view class="tagBall">
+</form>  -->
+
+<view class="padding bg-white flex" style="flex-direction:column;">
+  <view wx:if="{{per>50}}" class="flex" style="justify-content:center;color:#f37b1d;">
+    <text >情感偏正向</text>
+  </view>
+  <view wx:else class="flex" style="justify-content:center;color:#0081ff;">
+    <text >情感偏负向</text>
+  </view>
+  <view class="flex" style="justify-content:space-between;align-items: center;">
+    <image src="/image/posi.png" style="height: 40rpx;width: 40rpx;"></image>
+    <view class="cu-progress radius active">
+      <block wx:if="{{per>50}}">
+        <view class="bg-orange" style="width:{{loading?100-per+'%':''}};">{{100-per+'%'}}</view>
+        <view class="bg-grey" style="width:{{loading?per+'%':''}};">{{per+'%'}}</view>
+      </block>
+      <block wx:else>
+        <view class="bg-grey" style="width:{{loading?per+'%':''}};">{{per+'%'}}</view>
+        <view class="bg-blue" style="width:{{loading?100-per+'%':''}};">{{100-per+'%'}}</view>
+      </block>
+  </view>
+    <image src="/image/neg.png" style="height: 45rpx;width: 45rpx;"></image>
+  </view>
+</view>
+
+
+
+
+<view class="tagBall">
   <a class="tag" wx:for="{{tagEle}}" wx:key="{{index}}" style="opacity:{{item.o}};z-index:{{item.z}};left: {{item.x+250}}rpx;top: {{item.y}}rpx;transform: scale({{item.s}})">
     {{item.title}}
   </a>
- </view>
+</view>

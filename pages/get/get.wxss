@@ -1,5 +1,15 @@
-/* pages/get/get.wxss */.cu-form-group .title {
+/* pages/get/get.wxss */
+.cu-form-group .title {
   min-width: calc(4em + 30rpx);
+}
+.cu-progress {
+	overflow: hidden;
+	height: 28rpx;
+	background-color: #ebeef5;
+	display: inline-flex;
+	align-items: center;
+	width: 80%;
+  text-align: center;
 }
 .tagBall{
       width: 420rpx;
@@ -26,4 +36,14 @@
   .tag:hover{border:1px solid #666;}
 .container{
   height: 1500rpx;
+}
+image {
+	box-sizing: border-box;
+}
+.round {
+	border-radius: 5000rpx;
+}
+
+.radius {
+	border-radius: 6rpx;
 }

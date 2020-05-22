@@ -1,6 +1,7 @@
 const app = getApp();
 var util = require('../../utils/util.js')
 Page({
+  self:this,
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -9,13 +10,21 @@ Page({
     index: null,
     multiIndex: [0, 0, 0],
     time: '12:01',
-    date: '2018-12-25',
+    // date: '2018-12-25',
+    // d: parseInt(new Date().getTime()/1000),
+    // date: (parseInt(new Date().getTime() / 1000).getFullYear()) + "-" +
+    //   (parseInt(new Date().getTime() / 1000).getMonth() + 1) + "-" +
+    //   (parseInt(new Date().getTime() / 1000).getDate()),
+    start_date:'',
+    end_date:'',
     region: ['广东省', '广州市', '海珠区'],
     imgList: [],
     modalName: null,
     textareaAValue: '',
-    textareaBValue: ''
+    textareaBValue: '',
+    per:''
   },
+  
   PickerChange(e) {
     console.log(e);
     this.setData({
@@ -33,9 +42,14 @@ Page({
       time: e.detail.value
     })
   },
-  DateChange(e) {
+  sDateChange(e) {
     this.setData({
-      date: e.detail.value
+      start_date: e.detail.value
+    })
+  },
+  eDateChange(e) {
+    this.setData({
+      end_date: e.detail.value
     })
   },
   RegionChange: function (e) {
@@ -123,32 +137,36 @@ Page({
     })
   },
   formSubmit: function (e) {
+    var self = this;
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     console.log(e.detail.value)
     wx.request({
-      url: 'http://127.0.0.1:8000/login',
+      url: 'http://127.0.0.1:5000/analyse',
       method: 'POST',
-      data: { name: e.detail.value.name },
+      data: e.detail.value,
       success: function (res) {
+        console.log("success");
+        self.setData({ 'per': res.data.per });
         console.log(res["data"])
         console.log(util.getDiscovery()["ciyun"])
         util.getDiscovery()["ciyun"] = res["data"]
+        wx.navigateTo({
+          url: '../get/get?d=' + encodeURIComponent(JSON.stringify(self.data)),
+        })
       }
+      
     })
-    wx.navigateTo({
-      url: '../get/get',
-    })
-    console.log('awdwadwadwadaw')
+
   },
   formReset: function () {
     console.log('form发生了reset事件')
   },
-  // goNext() {
-  //   // 【næ vɪ ɡeɪ t to】
-  //   wx.navigateTo({
-  //     url: 'pages/get/get'//跳转
-  //   })
-  // },
+  goNext() {
+    // 【næ vɪ ɡeɪ t to】
+    wx.navigateTo({
+      url: '../get/get'//跳转
+    })
+  },
   formReset: function () {
     console.log('form发生了reset事件')
   }

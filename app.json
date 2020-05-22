@@ -1,12 +1,11 @@
 {
   "pages": [
+    "pages/first/first",
+    "pages/front/front",
     "pages/logs/logs",
     "pages/index/index",
-    
     "pages/get/get",
-    "pages/front/front",
-    "pages/first/first",
-      "pages/tiezi/tiezi"
+    "pages/tiezi/tiezi"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,22 +26,22 @@
         
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "我的",
-          "iconPath": "/image/tabbar/about.png",
-          "selectedIconPath": "/image/tabbar/about_cur.png"
-      },
-      {
         "pagePath": "pages/logs/logs",
-        "text": "用户信息获取",
+        "text": "分析",
           "iconPath": "/image/tabbar/component.png",
           "selectedIconPath": "/image/tabbar/component_cur.png"
       },
       {
         "pagePath": "pages/tiezi/tiezi",
-        "text": "发帖子",
+        "text": "发布内容",
           "iconPath": "/image/tabbar/plugin.png",
           "selectedIconPath": "/image/tabbar/plugin_cur.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "/image/tabbar/about.png",
+        "selectedIconPath": "/image/tabbar/about_cur.png"
       }
     ]
   },

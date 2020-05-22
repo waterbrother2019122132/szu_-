@@ -20,11 +20,12 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wxdb1eac7516e99ae4",
+	"appid": "wx5531bd7447b43dee",
 	"projectname": "gupiaotest",
 	"debugOptions": {
 		"hidedInDevtools": []

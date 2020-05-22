@@ -11,14 +11,24 @@ Page({
  
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    console.log(e.detail.value.name)//弄不出来
-    
+    console.log(e.detail.value.name)
+    var d= new Date();
+    var date = (d.getFullYear()) + "-" +
+      (d.getMonth() + 1) + "-" +
+      (d.getDate());
     wx.request({
-      url: 'http://127.0.0.1:8000/login',
+      url: 'http://127.0.0.1:5000/release',
       method: 'POST',
-      data: { name: e.detail.value.name,content: e.detail.value.content}, //字段名写清楚 
+      data: { 
+        title: e.detail.value.title,
+        article: e.detail.value.content,
+        author: getApp().globalData.userInfo.nickName,
+        stkcd: e.detail.value.stackid,
+        time: date
+        }, //字段名写清楚 
       success: function (res) {
-        var list = res.data.list;
+
+        var list = res.data;
         console.log(list)
         console.log(111)
       }
@@ -38,9 +48,6 @@ Page({
       "comment_num": "18"
     })
     console.log('awdwadwadwadaw')
-    wx.switchTab({
-      url: '../first/first',
-    })
   },
   formReset: function () {
     console.log('form发生了reset事件')

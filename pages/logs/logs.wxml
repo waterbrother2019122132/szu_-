@@ -9,17 +9,25 @@
 	</view>
 
 	<view class="cu-form-group">
-		<view class="title">开始</view>
-		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange" name="time">
+		<view class="title">开始日期</view>
+		<picker mode="date" value="{{end_date}}" start="2000-01-01" end="2020-05-07" bindchange="sDateChange" name="start_time">
 			<view class="picker">
-				{{date}}
+				{{start_date}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">结束日期</view>
+		<picker mode="date" value="{{end_date}}" start="2000-01-01" end="2020-05-07" bindchange="eDateChange" name="end_time">
+			<view class="picker">
+				{{end_date}}
 			</view>
 		</picker>
 	</view>
 
    <view class="btn-area">
    <view class="btn"> 
-    <button formType="submit" bindtap="goNext" type="primary" 
+    <button formType="submit" bindtap="" type="primary" 
     >Submit</button>
 	</view>
 	  

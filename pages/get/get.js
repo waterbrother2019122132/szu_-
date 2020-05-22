@@ -3,6 +3,7 @@ var util = require('../../utils/util.js')
 Page({
   
   data: {
+
     ciyun: 'adw',
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -72,11 +73,11 @@ Page({
     this.innit();
   }
   ,
- 
+  
   innit() {
-
+    var self = this;
     var tagEle = [{
-      title: '我是谁',
+      title: self.data.ciyun.word_dict[0],
       x: 0,
       y: 0,
       z: 0,
@@ -87,7 +88,7 @@ Page({
       angleY: 0
     },
     {
-      title: '我在哪',
+      title: self.data.ciyun.word_dict[1],
       x: 0,
       y: 0,
       z: 0,
@@ -98,7 +99,7 @@ Page({
       angleY: 0
     },
     {
-      title: '123',
+      title: self.data.ciyun.word_dict[2],
       x: 0,
       y: 0,
       z: 0,
@@ -109,7 +110,7 @@ Page({
       angleY: 0
     },
     {
-      title: '456',
+      title: self.data.ciyun.word_dict[3],
       x: 0,
       y: 0,
       z: 0,
@@ -120,7 +121,7 @@ Page({
       angleY: 0
     },
     {
-      title: '789',
+      title: self.data.ciyun.word_dict[4],
       x: 0,
       y: 0,
       z: 0,
@@ -131,7 +132,7 @@ Page({
       angleY: 0
     },
     {
-      title: 'zhy',
+      title: self.data.ciyun.word_dict[5],
       x: 0,
       y: 0,
       z: 0,
@@ -142,7 +143,7 @@ Page({
       angleY: 0
     },
     {
-      title: 'zhy',
+      title: self.data.ciyun.word_dict[6],
       x: 0,
       y: 0,
       z: 0,
@@ -153,7 +154,7 @@ Page({
       angleY: 0
     },
     {
-      title: '我',
+      title: self.data.ciyun.word_dict[7],
       x: 0,
       y: 0,
       z: 0,
@@ -164,7 +165,7 @@ Page({
       angleY: 0
     },
     {
-      title: '你',
+      title: self.data.ciyun.word_dict[8],
       x: 0,
       y: 0,
       z: 0,
@@ -175,7 +176,7 @@ Page({
       angleY: 0
     },
     {
-      title: '就是',
+      title: self.data.ciyun.word_dict[9],
       x: 0,
       y: 0,
       z: 0,
@@ -186,7 +187,7 @@ Page({
       angleY: 0
     },
     {
-      title: '是不是',
+      title: self.data.ciyun.word_dict[10],
       x: 0,
       y: 0,
       z: 0,
@@ -197,7 +198,7 @@ Page({
       angleY: 0
     },
     {
-      title: '哪里呢',
+      title: self.data.ciyun.word_dict[11],
       x: 0,
       y: 0,
       z: 0,
@@ -208,7 +209,7 @@ Page({
       angleY: 0
     },
     {
-      title: '有什么',
+      title: self.data.ciyun.word_dict[12],
       x: 0,
       y: 0,
       z: 0,
@@ -219,7 +220,7 @@ Page({
       angleY: 0
     },
     {
-      title: '没什么',
+      title: self.data.ciyun.word_dict[13],
       x: 0,
       y: 0,
       z: 0,
@@ -230,7 +231,7 @@ Page({
       angleY: 0
     },
     {
-      title: '今天几号',
+      title: self.data.ciyun.word_dict[14],
       x: 0,
       y: 0,
       z: 0,
@@ -241,7 +242,7 @@ Page({
       angleY: 0
     },
     {
-      title: '我稀罕你',
+      title: self.data.ciyun.word_dict[15],
       x: 0,
       y: 0,
       z: 0,
@@ -252,7 +253,7 @@ Page({
       angleY: 0
     },
     {
-      title: '我是',
+      title: self.data.ciyun.word_dict[16],
       x: 0,
       y: 0,
       z: 0,
@@ -263,7 +264,7 @@ Page({
       angleY: 0
     },
     {
-      title: '你是',
+      title: self.data.ciyun.word_dict[17],
       x: 0,
       y: 0,
       z: 0,
@@ -274,7 +275,7 @@ Page({
       angleY: 0
     },
     {
-      title: '这是什么',
+      title: self.data.ciyun.word_dict[18],
       x: 0,
       y: 0,
       z: 0,
@@ -483,13 +484,16 @@ Page({
       textareaBValue: e.detail.value
     })
   },
-  onLoad() {
+  onLoad:function(option) {
     let that = this;
     setTimeout(function () {
       that.setData({
         loading: true
       })
     }, 500)
+    var d = JSON.parse(decodeURIComponent(option.d));
+    that.setData({ per: d.per });
+    that.setData({ ciyun: d.word_dict });
   },
   showModal(e) {
     this.setData({
