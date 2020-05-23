@@ -1,3 +1,4 @@
+
   <view class="UCenter-bg">
     <image src="/image/analyse.png" class="png" mode="widthFix"></image>
     <view class="text-xl">
@@ -36,51 +37,8 @@
     </view>
   
   </view>
-      <!--
-  <scroll-view scroll-x class="bg-green nav text-center">
-  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
-    <text class="cuIcon-camerafill"></text> 数码
-  </view>
-  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
-    <text class="cuIcon-upstagefill"></text> 排行榜
-  </view>
-  <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="2">
-    <text class="cuIcon-clothesfill"></text> 皮肤
-  </view>
-  <view class="cu-item {{3==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="3">
-    <text class="cuIcon-clothesfill"></text> 皮肤
-  </view>
-  <view class="cu-item {{4==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="4">
-    <text class="cuIcon-clothesfill"></text> 皮肤
-  </view>
 
-</scroll-view>
--->
-<view class='container'>
-  <!--Tab布局-->
-  <view class='title'>
-    <view class='titleSel' bindtap='titleClick' data-idx='0'>
-      <text>第一个选项</text>
-      <hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
-    </view>
-    
-    <view class='titleSel' bindtap='titleClick' data-idx='1'>
-      <text>第二个选项</text>
-      <hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
-    </view>
-  </view>
 
-  <!--内容布局-->
-  <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
-    <swiper-item class='swiper'>
-      <view wx:for="{{firstList}}" class='recordItem'>
-        <view class='name'>昵称：{{item}}</view>
-      </view>
-    </swiper-item>
-    <swiper-item class='swiper' class='swiper'>
-      <view wx:for="{{secondList}}" class='recordItem'>
-        <view class='name'>昵称：{{item}}</view>
-      </view>
-    </swiper-item>
-  </swiper>
-</view>
+    <Tabs tabs="{{tabs}}" bindTabsChange="handleTabsChange">
+    </Tabs>
+   
