@@ -1,44 +1,94 @@
-
-  <view class="UCenter-bg">
-    <image src="/image/analyse.png" class="png" mode="widthFix"></image>
-    <view class="text-xl">
-      <text class="text-df">v2.0</text>
-    </view>
+<view class="UCenter-bg">
+  <image src="/image/analyse.png" class="png" mode="widthFix"></image>
+  <view class="text-xl">
+    <text class="text-df">v2.0</text>
+  </view>
+  <view class="margin-top-sm">
+    <text>Szu_Snow小队</text>
+  </view>
+  <image src="../../image/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-orange">{{visitTotal}}</view>
     <view class="margin-top-sm">
-      <text>Szu_Snow小队</text>
+      <text class="cuIcon-attentionfill"></text>
+      文章
     </view>
-    <image src="../../image/wave.gif" mode="scaleToFill" class="gif-wave"></image>
   </view>
-  <view class="padding flex text-center text-grey bg-white shadow-warp">
-    <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-orange">{{visitTotal}}</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-attentionfill"></text> 文章</view>
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-blue">{{starCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-favorfill"></text>
+      评论
     </view>
-    <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-blue">{{starCount}}</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-favorfill"></text> 评论</view>
-    </view>
-    <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">{{forksCount}}</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-fork"></text> 留言</view>
-    </view>
-      <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">{{forksCount}}</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-fork"></text> 留言</view>
-    </view>
-      <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">{{forksCount}}</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-fork"></text> 留言</view>
-    </view>
-  
   </view>
-
-
-    <Tabs tabs="{{tabs}}" bindTabsChange="handleTabsChange">
-    </Tabs>
-   
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{forksCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-fork"></text>
+      留言
+    </view>
+  </view>
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{forksCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-fork"></text>
+      留言
+    </view>
+  </view>
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{forksCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-fork"></text>
+      留言
+    </view>
+  </view>
+</view>
+<!-- 选项卡 -->
+<view class='ticket-container'>
+  <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!-- Tab布局 -->
+    <view class='title'>
+      <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+        <text>未使用</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+        <text>已使用</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+        <text>已过期</text>
+        <hr class="line-style" />
+      </view>
+    </view>
+    <!-- 内容布局 -->
+    <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+      <swiper-item class='swiper'>
+        <view wx:for="{{firstList}}" wx:for-item="item" class='record-item'>
+          <view class='name'>
+            <span>名称：{{item.name}}</span>
+            <span>面额：{{item.money}}</span>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='swiper' class='swiper'>
+        <view wx:for="{{secondList}}" wx:for-item="item" class='record-item'>
+          <view class='name'>
+            <span>名称：{{item.name}}</span>
+            <span>面额：{{item.money}}</span>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='swiper' class='swiper'>
+        <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
+          <view class='name'>
+            <span>名称：{{item.name}}</span>
+            <span>面额：{{item.money}}</span>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+</view>
