@@ -1,5 +1,9 @@
 {
   "usingComponents": {
-    "Tabs":"../../components/Tabs/Tabs"
+    "Tabs": "../../components/Tabs/Tabs",
+    "list": "../../components/list/list",
+    "people":"../../components/people/people",
+    "chat": "../../components/chat/chat"
+
   }
 }
